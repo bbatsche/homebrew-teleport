@@ -1,8 +1,8 @@
-class TeleportAT24 < Formula
+class TeleportAT25 < Formula
   desc "Modern SSH server for teams managing distributed infrastructure"
   homepage "https://gravitational.com/teleport"
-  url "https://github.com/gravitational/teleport/archive/v2.4.5.tar.gz"
-  sha256 "38ff45138720d1a50ff6a5a75a60d98356d37f16b9c95883f8f4b0ac263c3bc3"
+  url "https://github.com/gravitational/teleport/archive/v2.5.2.tar.gz"
+  sha256 "84d637c848a173113ddb49437ca7bc631525ce96221c25a2b4b6f1dba86570a2"
 
   keg_only :versioned_formula
 
@@ -13,6 +13,9 @@ class TeleportAT24 < Formula
     ENV["GOARCH"] = MacOS.prefer_64_bit? ? "amd64" : "386"
     ENV["GOPATH"] = buildpath
     ENV["GOROOT"] = Formula["go"].opt_libexec
+
+    # Reported 21 Feb 2018 https://github.com/gravitational/teleport/issues/1708
+    inreplace "Makefile", "-j 3", "-j 1"
 
     (buildpath/"src/github.com/gravitational/teleport").install buildpath.children
     cd "src/github.com/gravitational/teleport" do
