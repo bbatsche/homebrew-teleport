@@ -20,6 +20,7 @@ brew link --force teleport@<version>
 - [Teleport 2.3](https://gravitational.com/teleport/docs/ver/2.3/)
 - [Teleport 2.4](https://gravitational.com/teleport/docs/ver/2.4/)
 - [Teleport 2.5](https://gravitational.com/teleport/docs/ver/2.5/)
-- [Teleport 2.6](https://gravitational.com/teleport/docs/)
+- [Teleport 2.7](https://gravitational.com/teleport/docs/ver/2.7/)
+- [Teleport 3.0](https://gravitational.com/teleport/docs/)
 
-_**Note:** Teleport 2.6 is the current stable version installed by default through Homebrew. It's included here for debugging purposes and completeness, but should be installed through regular formula in Homebrew Core._
+_**Note:** Teleport 3.0 is the current stable version installed by default through Homebrew. It's included here for debugging purposes and completeness, but should be installed through regular formula in Homebrew Core._
